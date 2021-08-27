@@ -1,0 +1,238 @@
+.directors-section {
+  background-color: $DeepJungleGreen;
+  background-image: 
+  url("/images/directors-bg-top.png"),
+  url("/images/directors-bg-bottom.png");
+  background-repeat: no-repeat;
+  background-position: calc(50% - 660px) top, calc(50% + 660px) bottom;
+}
+
+.directors {
+  padding-top: 140px;
+  padding-bottom: 170px;
+}
+
+.directors__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 48px;
+  text-align: center;
+  color: $White;
+  margin: 0;
+  margin-bottom: 64px;
+}
+
+.directors-list {
+  @include list-unstyled;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.directors-item {
+  width: 350px;
+  height: 253px;
+  background-color: $SacramentoStateGreen;
+  text-align: center;
+  position: relative;
+  margin-bottom: 76px;
+  margin-left: 10px;
+  &:hover .directors-item-change {
+    opacity: 1;
+    transition: 2s ease;
+  }
+}
+
+.directors-item:nth-child(3*n) {
+  margin-left: 0px;
+}
+
+.directors-image {
+  margin-top: 32px;
+  display: block;
+  margin-bottom: 16px;
+  width: 100px;
+  height: 98px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.directors-name {
+  margin: 0;
+  color: $RaptureBlue;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 10px;
+}
+
+.directors-work-info {
+  margin: 0;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  color: $White;
+  margin-bottom: 56px;
+}
+
+.mark {
+  position: absolute;
+  top: 226px;
+  left: 150px;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  background-color: $LightCoral;
+  color: $SacramentoStateGreen;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 11px;
+}
+
+.directors-item-change {
+  width: 330px;
+  height: 253px;
+  position: absolute;
+  top: 0px;
+  text-align: center;
+  background-color: $SacramentoStateGreen;
+  opacity: 0;
+}
+
+.directors-name-change {
+  margin: 0;
+  margin-top: 35px;
+  color: $RaptureBlue;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.directors-work-info-change {
+  margin: 0;
+  width: 254px;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  color: $White;
+  margin-bottom: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.directors-sites {
+  display: inline-block;
+}
+
+.directors-sites ~ .directors-sites {
+  margin-left: 16px;
+}
+
+.directors-sites-logos1 {
+  display: block;
+
+  &:hover {
+    fill: $LightCoral;
+    transition: 0.5s ease;
+  }
+}
+
+.directors-sites-logos2 {
+  display: block;
+  fill: $White;
+
+  &:hover {
+    fill: $LightCoral;
+    transition: 0.5s ease;
+  }
+}
+
+.blue {
+  position: absolute;
+  top: 226px;
+  left: 138px;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  background-color: $RaptureBlue;
+  color: $SacramentoStateGreen;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 11px;
+}
+
+@include breakpoint-down(1119px) {
+
+   
+  .directors-title {
+    margin-top: 90px;
+  }
+
+  .directors-section {
+    background-position: calc(0%) top, calc(100%) bottom;
+  }
+
+  .directors-list {
+    justify-content: center;
+  }
+
+  .directors-item {
+    margin: 0;
+    margin-bottom: 76px;
+    margin-left: 10px;
+  }
+
+  .directors-item:nth-child(2*n) {
+    margin-left: 0px;
+  }
+}
+
+@include breakpoint-down(630px) {
+  
+  .directors-section {
+    background-position: calc(-5%) top, calc(100%) bottom;
+  }
+}
+
+@include breakpoint-down(470px) {
+
+  .directors {
+    padding-top: 120px;
+    padding-bottom: 130px;
+  }
+  
+  .directors-title {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+@include breakpoint-down(400px) {
+  .directors-item {
+    width: 290px;
+    height: 253px;
+  }
+
+  .directors-item-change {
+    width: 290px;
+    height: 253px;
+  }
+
+  .directors-title {
+    width: 290px;
+  }
+
+  .mark {
+    left: 40%;
+  }
+}
